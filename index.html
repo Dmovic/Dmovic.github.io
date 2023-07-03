@@ -170,7 +170,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2023-07-03 14:22:58 / Modified: 14:24:57" itemprop="dateCreated datePublished" datetime="2023-07-03T14:22:58+08:00">2023-07-03</time>
+              <time title="Created: 2023-07-03 14:22:58 / Modified: 17:35:29" itemprop="dateCreated datePublished" datetime="2023-07-03T14:22:58+08:00">2023-07-03</time>
             </span>
 
           
@@ -184,7 +184,102 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>尝试搭建github博客</p>
+          <p>尝试搭建github博客，采用nodejs，hexo等工具进行管理</p>
+<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><ul>
+<li>安装git</li>
+<li>安装cnpm</li>
+<li>安装hexo</li>
+</ul>
+<h3 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h3><p>下载地址 <a target="_blank" rel="noopener" href="http://nodejs.cn/download/">http://nodejs.cn/download/</a></p>
+<p>选择windows安装包，选项中选择Add to PATH自动加入环境变量。</p>
+<h3 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h3><p>下载地址 <a target="_blank" rel="noopener" href="https://git-scm.com/">https://git-scm.com/</a></p>
+<p>正常下载速度较慢，选择安装位置，一直next使用默认配置</p>
+<h3 id="验证nodejs"><a href="#验证nodejs" class="headerlink" title="验证nodejs"></a>验证nodejs</h3><p>桌面右键，选择Git Bash Here，在git的命令行界面输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p>依次输出版本号表示安装正确，否则需要检查环境变量等信息</p>
+<h3 id="安装cnpm"><a href="#安装cnpm" class="headerlink" title="安装cnpm"></a>安装cnpm</h3><p>在git bash中执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>检查是否安装成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
+
+<p>输出版本号则安装成功</p>
+<h3 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h3><p>在git bash中执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<h3 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h3><p>首先新建文件夹，右键打开Git bash，执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>执行到<code>Install dependencies</code>可能会卡住</p>
+<p>可以ctrl c强制中断</p>
+<p>然后执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install</span><br></pre></td></tr></table></figure>
+
+<p>使用国内镜像完成初始化，命令执行完成初始化</p>
+<p>预览博客</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>点击输出的网址进行预览</p>
+<h2 id="更换和配置主题"><a href="#更换和配置主题" class="headerlink" title="更换和配置主题"></a>更换和配置主题</h2><p>hexo主题地址 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
+<p>新手入门next主题</p>
+<ul>
+<li>预览效果：<a target="_blank" rel="noopener" href="https://theme-next.org/">https://theme-next.org/</a></li>
+<li>项目地址：<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a></li>
+<li>配置文档：<a target="_blank" rel="noopener" href="https://theme-next.org/docs/getting-started/">https://theme-next.org/docs/getting-started/</a></li>
+</ul>
+<p>打开主题的项目地址，复制地址</p>
+<p>在博客文件夹打开git bash，执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 复制的地址 themes/主题名字</span><br></pre></td></tr></table></figure>
+
+<p>把文件夹下载到themes目录下，并命名为next</p>
+<h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><p>博客目录下的<code>_config.yml</code>文件</p>
+<p>找到theme设置，修改为next</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+
+<p>git bash执行hexo s进行预览</p>
+<h3 id="配置主题"><a href="#配置主题" class="headerlink" title="配置主题"></a>配置主题</h3><ul>
+<li>站点配置文件，是博客根目录下的<code>_config.yml</code>文件</li>
+<li>主题配置文件，是主题下的的<code>_config.yml</code>，例如<code>theme/next/_config.yml</code></li>
+</ul>
+<p>配置中可以设置语言等</p>
+<h2 id="生成文章"><a href="#生成文章" class="headerlink" title="生成文章"></a>生成文章</h2><p>博客根目录下执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;标题&quot;</span><br></pre></td></tr></table></figure>
+<p>例如</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;my-first-blog&quot;</span><br></pre></td></tr></table></figure>
+<p>然后显示对应的目录，文章在source&#x2F;_posts下，是md文件</p>
+<p>按照目录打开md文件，发现横线上有一段博客信息</p>
+<ul>
+<li>title标题</li>
+<li>date日期</li>
+<li>tag标签</li>
+</ul>
+<p>可以在其中修改文章标题，并在横线下开始书写博客</p>
+<h2 id="部署博客至github"><a href="#部署博客至github" class="headerlink" title="部署博客至github"></a>部署博客至github</h2><p>创建一个仓库</p>
+<p>仓库名必须是用户名+.github.io，勾选初始化README</p>
+<p>接下来创建git密钥，打开bash执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+<p>一直回车</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>复制输出信息</p>
+<p>github中点击头像，设置，ssh，新建ssh key，在其中粘贴密钥</p>
+<p>然后打开git bash，执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>输入yes回车</p>
+<p>复制ssh的地址，即git@…</p>
+<p>打开站点配置文件，修改deploy信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: 你复制的地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>设置git信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+
+<p>安装上传插件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><p>博客根目录打开git bash</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+
+<p>github打开项目，settings，github pages，选择master branch，之后就会得到网址地址了</p>
 
       
     </div>
