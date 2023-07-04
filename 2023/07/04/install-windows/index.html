@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="包含硬盘、操作系统安装、基本软件安装">
+<meta property="og:type" content="article">
+<meta property="og:title" content="重装系统win10">
+<meta property="og:url" content="http://example.com/2023/07/04/install-windows/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="包含硬盘、操作系统安装、基本软件安装">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-07-04T08:59:40.000Z">
+<meta property="article:modified_time" content="2023-07-04T09:03:11.120Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2023/07/04/install-windows/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>重装系统win10 | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/04/install-windows/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          重装系统win10
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-07-04 16:59:40 / Modified: 17:03:11" itemprop="dateCreated datePublished" datetime="2023-07-04T16:59:40+08:00">2023-07-04</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>包含硬盘、操作系统安装、基本软件安装</p>
+<span id="more"></span>
+<h2 id="硬盘"><a href="#硬盘" class="headerlink" title="硬盘"></a>硬盘</h2><p>由于本机硬盘被划分为了D、E、F等盘，一开始想要通过win11自带的恢复功能将电脑恢复为初始化状态（后来失败了，找不到恢复环境），所以首先将硬盘进行格式化并合并为只有一个C盘。</p>
+<h3 id="恢复分区的删除"><a href="#恢复分区的删除" class="headerlink" title="恢复分区的删除"></a>恢复分区的删除</h3><p>磁盘管理工具中发现在C盘和DEF盘中间有恢复分区，无法合并，需要删除恢复分区，windows敲出cmd窗口。</p>
+<p>进入硬盘分区工具</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diskpart</span><br></pre></td></tr></table></figure>
+<p>查看已有的硬盘</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list disk</span><br></pre></td></tr></table></figure>
+<p>选择硬盘</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select disk 0</span><br></pre></td></tr></table></figure>
+<p>列出所选硬盘的分区</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list partition</span><br></pre></td></tr></table></figure>
+<p>选择要删除的恢复分区</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select partition 8</span><br></pre></td></tr></table></figure>
+<p>删除恢复分区</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete partition override</span><br></pre></td></tr></table></figure>
+<h3 id="将硬盘合并"><a href="#将硬盘合并" class="headerlink" title="将硬盘合并"></a>将硬盘合并</h3><p>恢复分区删除后，可以将磁盘进行合并。</p>
+<p><code>此电脑-管理-磁盘管理</code>中查看详细情况，分区合并时只能从后往前合并</p>
+<ul>
+<li>点击后面的被合并的分区，删除卷。本来蓝色的分区会变成灰色的未分配</li>
+<li>点击前面的要合并的分区，扩展卷，将后面的未分配合并进来</li>
+</ul>
+<h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><p>采用u盘介质安装</p>
+<h3 id="u盘格式化"><a href="#u盘格式化" class="headerlink" title="u盘格式化"></a>u盘格式化</h3><p>需要一个8G以上的u盘。格式化时可能坑比较多，经常出现windows未能格式化，需要耐心多重复几次。</p>
+<p>u盘插入电脑，右键选择格式化，文件系统选择NTFS，分区选择默认大小，取消快速格式化，点击后等待。这里使用的是金士顿kingston的16G的u盘，失败了需要继续尝试。</p>
+<h3 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h3><p>找到win10的微软官方下载，<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/software-download/windows10">https://www.microsoft.com/zh-cn/software-download/windows10</a></p>
+<p>其中选择立即下载工具，下载到格式化好的u盘中</p>
+<p>此时最新的win10版本是22h2</p>
+<h3 id="运行下载工具"><a href="#运行下载工具" class="headerlink" title="运行下载工具"></a>运行下载工具</h3><p>以管理员身份运行下载工具，选择u盘介质，并选择该u盘。期间会自动进行下载和安装后的清理。</p>
+<p>注意在制作u盘介质的过程中，很可能会报错，各种代码，注意检查</p>
+<ul>
+<li>u盘是否正确格式化</li>
+<li>下载工具是否放在u盘中</li>
+<li>是否使用管理员身份运行</li>
+</ul>
+<p>制作成功后，工作已经完成了大半</p>
+<h3 id="重新安装操作系统"><a href="#重新安装操作系统" class="headerlink" title="重新安装操作系统"></a>重新安装操作系统</h3><p>需要查看对应型号的设置，联想是F12。保持u盘插入，开机后疯狂按F12，进入选项，选择从u盘启动，顺利的话会进入安装程序，依次操作即可。</p>
+<p>选择完毕后会自动重启，重启时立即拔下u盘，避免再次从u盘启动。</p>
+<p>将进入windows的初始化设置界面，设置用户名、密码等</p>
+<h2 id="基本软件"><a href="#基本软件" class="headerlink" title="基本软件"></a>基本软件</h2><p>此时完成开机，能看到清爽的桌面。</p>
+<p>对于笔记本已经自带的正版windows激活，联网之后会自动读取主板上的序列进行激活，在系统中查看到已激活。</p>
+<p>一般是家庭版，可以参考b站升级为专业版。笔者尝试过升级成专业版来暂停自动更新，但专业版中没有找到一键的操作，后来也就还是用的家庭版。</p>
+<p>家庭版中可以通过服务-Windows Update等操作暂停</p>
+<h3 id="office-tool"><a href="#office-tool" class="headerlink" title="office tool"></a>office tool</h3><p>可以通过密钥下载基础的office套装，但如果只安装一次软件，可以考虑office tool，安装的企业版Microsoft 365</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/07/03/%E5%AD%A6%E4%B9%A0github%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" rel="prev" title="学习github博客搭建">
+      <i class="fa fa-chevron-left"></i> 学习github博客搭建
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AC%E7%9B%98"><span class="nav-number">1.</span> <span class="nav-text">硬盘</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%81%A2%E5%A4%8D%E5%88%86%E5%8C%BA%E7%9A%84%E5%88%A0%E9%99%A4"><span class="nav-number">1.1.</span> <span class="nav-text">恢复分区的删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%86%E7%A1%AC%E7%9B%98%E5%90%88%E5%B9%B6"><span class="nav-number">1.2.</span> <span class="nav-text">将硬盘合并</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.</span> <span class="nav-text">操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u%E7%9B%98%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="nav-number">2.1.</span> <span class="nav-text">u盘格式化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.2.</span> <span class="nav-text">软件下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7"><span class="nav-number">2.3.</span> <span class="nav-text">运行下载工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E6%96%B0%E5%AE%89%E8%A3%85%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.4.</span> <span class="nav-text">重新安装操作系统</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E8%BD%AF%E4%BB%B6"><span class="nav-number">3.</span> <span class="nav-text">基本软件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#office-tool"><span class="nav-number">3.1.</span> <span class="nav-text">office tool</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
