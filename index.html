@@ -113,6 +113,11 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
@@ -141,6 +146,93 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/07/12/hexo%E5%8D%9A%E5%AE%A2%E5%88%86%E7%B1%BB%E8%AE%BE%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/07/12/hexo%E5%8D%9A%E5%AE%A2%E5%88%86%E7%B1%BB%E8%AE%BE%E7%BD%AE/" class="post-title-link" itemprop="url">hexo博客分类设置</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-07-12 13:49:30 / Modified: 14:16:04" itemprop="dateCreated datePublished" datetime="2023-07-12T13:49:30+08:00">2023-07-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Blog%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">Blog搭建</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>记录如何在next主题下进行博客分类设置，更多next主题设置可以参考<a target="_blank" rel="noopener" href="https://theme-next.iissnan.com/theme-settings.html">https://theme-next.iissnan.com/theme-settings.html</a></p>
+<h2 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h2><p>首先找到项目文件夹下<code>\themes\next_config.yml</code>，将categories这行注释去掉</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || fa fa-home</span><br><span class="line">  #about: /about/ || fa fa-user</span><br><span class="line">  #tags: /tags/ || fa fa-tags</span><br><span class="line">  categories: /categories/ || fa fa-th</span><br><span class="line">  archives: /archives/ || fa fa-archive</span><br><span class="line">  #schedule: /schedule/ || fa fa-calendar</span><br><span class="line">  #sitemap: /sitemap.xml || fa fa-sitemap</span><br><span class="line">  #commonweal: /404/ || fa fa-heartbeat</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建分类目录"><a href="#创建分类目录" class="headerlink" title="创建分类目录"></a>创建分类目录</h2><p>修改完配置之后还没有文件夹，需要手动创建</p>
+<p>博客项目文件夹下git bash</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+<p>成功后显示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: ~\Desktop\bak\blog\source\categories\index.md</span><br></pre></td></tr></table></figure>
+<p>完成文件夹的创建。但是主题还不会识别该目录为分类页面，所以需要手动编辑显示分类。</p>
+<h2 id="编辑页面"><a href="#编辑页面" class="headerlink" title="编辑页面"></a>编辑页面</h2><p>打开显示路径下的文件，默认内容是</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2023-07-12 13:58:05</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>需要添加上categories的类型，让主题自动识别页面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2023-07-12 13:58:05</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>这样就完成了配置</p>
+<h2 id="文章设置分类属性"><a href="#文章设置分类属性" class="headerlink" title="文章设置分类属性"></a>文章设置分类属性</h2><p>在需要分类的文章的信息栏中，加入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">categories: </span><br><span class="line">- TVM</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>表示添加到<code>TVM</code>的分类下，还可以设置二级分类</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//设置二级分类</span><br><span class="line">---</span><br><span class="line">categories: </span><br><span class="line">- TVM</span><br><span class="line">- xxx</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>表示添加到<code>TVM</code>分类的<code>xxx</code>分类</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -242,8 +334,17 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-04 17:03:12" itemprop="dateModified" datetime="2023-07-04T17:03:12+08:00">2023-07-04</time>
+                <time title="Modified: 2023-07-12 14:08:36" itemprop="dateModified" datetime="2023-07-12T14:08:36+08:00">2023-07-12</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Blog%E6%90%AD%E5%BB%BA/" itemprop="url" rel="index"><span itemprop="name">Blog搭建</span></a>
+                </span>
+            </span>
 
           
 
@@ -422,9 +523,15 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span></a>
       </div>
   </nav>
 </div>
